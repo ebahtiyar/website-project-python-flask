@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="text-center">
+
+    <h3>MAKALE OLUŞTUR</h3>
+    <hr>
+    {% from "includes/formhelpers.html" import render_field %}
+
+    <form method= "post">
+        
+    
+    {{ render_field(form.title , class = "form-control") }}
+    {{ render_field(form.content , class = "form-control" ) }}
+    
+    <button type="submit" class="btn btn-danger">EKLE !</button>
+</form>
+
+</div>      
+
+
+
+</div>
+
+{% endblock body %}

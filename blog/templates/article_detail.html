@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+{% if article %}
+<div class = text-center>
+    <h1>{{article.title}}</h1>
+    <hr>
+    {{article.content|safe}}
+</div>
+
+
+<div class = text-right>
+    <h6>
+        {{article.author|safe}}
+        <br>
+        {{article.created_date}}
+    </h6>
+</div>
+
+{% else %}
+
+<div class = "alert alert-danger">
+ Böyle bir makale bulunmuyor...
+</div>
+{% endif %}
+
+{% endblock body %}
